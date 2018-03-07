@@ -48,6 +48,7 @@ a {
     text-decoration: none;
     color: #2f678b;
     z-index: 1;
+    font-family: sans-serif;
 }
 a:hover + svg path {
     animation: dash 1s linear forwards;
