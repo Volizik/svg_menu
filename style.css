@@ -1,0 +1,61 @@
+body {
+    background-color: #a9e3ff;
+    margin: 0;
+    padding: 0;
+}
+.wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    height: 100vh;
+    min-height: 400px;
+}
+ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    height: 100%;
+}
+li {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 30px 20px;
+}
+svg {
+    position: absolute;
+    top: 0;
+    height: 100%;
+}
+path {
+    fill: none;
+    stroke: #6fa8c8;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+}
+.active svg path {
+    stroke-dashoffset: 0;
+    stroke: #f3625c;
+}
+a {
+    display: block;
+    position: relative;
+    font-size: 10vh;
+    text-decoration: none;
+    color: #2f678b;
+    z-index: 1;
+}
+a:hover + svg path {
+    animation: dash 1s linear forwards;
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
